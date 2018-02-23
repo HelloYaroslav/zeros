@@ -3,13 +3,11 @@ module.exports =
         // your implementation
         var arr = [];
         var res = 0;
-        for (i = 1; i <= number; i++)
-            if (i % 5 == 0)
-                arr.push(i);
+        for (i = 5; i <= number; i = i + 5)
+            res = res + getFive(i);
 
         function getFive(num) {
-            var inFive = 0;
-            for (var i = 1; 1 == 1; i++) {
+            for (var i = 1;; i++) {
                 num = num / 5;
                 if ((num < 5) || (num % 5 != 0)) {
 
@@ -20,10 +18,8 @@ module.exports =
 
         }
 
-        for (i = 0; i < arr.length; i++)
-            res = res + getFive(arr[i]);
 
-        console.log(res);
+
 
         return res;
     }
